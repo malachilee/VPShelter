@@ -8,11 +8,12 @@ namespace VPShelter
 {
     class Cat : VirtualPet
     {
-        // properties
+        //Fields/Properties
+
         public string CatBreed { get; set; }
         public string Diet { get; set; }
 
-        // constructors
+        //Constructors
 
         public Cat()
         {

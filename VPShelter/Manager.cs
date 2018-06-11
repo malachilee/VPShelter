@@ -9,6 +9,7 @@ namespace VPShelter
     class Manager : Employee
     {
         // Fields/Properties
+
         public string ManName { get; set; }
 
         // Constructors
@@ -24,6 +25,7 @@ namespace VPShelter
         }
 
         // Methods
+
         public override string ClockIn()
         {
             return "Manager clocked In.";

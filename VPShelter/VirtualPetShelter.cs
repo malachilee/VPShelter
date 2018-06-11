@@ -8,7 +8,7 @@ namespace VPShelter
 {
     class VirtualPetShelter
     {
-        // Fields/Properties
+        //Fields/Properties
 
         public List<VirtualPet> HomelessPets { get; set; }
         public List<Employee> VPSEmployees { get; set; }

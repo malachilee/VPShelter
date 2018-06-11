@@ -8,27 +8,27 @@ namespace VPShelter
 {
     class VirtualPet
     {
- // Declare Fields/Properties
+        //Fields/Properties
         public int Age { get; set; }
         public int Hunger { get; set; }
         public int Thirst { get;set; }
-        public int Sleep { get; set; }
+        public int Boredom { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
-        // Declare Constructors
+        //Constructors
 
         public VirtualPet()
         {
             // Default Constructor
         }
 
-        public VirtualPet(int age, int hunger, int thrist, int sleep, string name, string description)
+        public VirtualPet(int age, int hunger, int thrist, int boredom, string name, string description)
         {
             this.Age = age;
             this.Hunger = hunger;
             this.Thirst = thrist;
-            this.Sleep = sleep;
+            this.Boredom = boredom;
             this.Name = name;
             this.Description = description;
         }
@@ -39,14 +39,14 @@ namespace VPShelter
             this.Description = description;
         }
 
-        // Declare Methods
+        //Methods
 
         public void Tick()// Tick Method
         {
             this.Age++;
             this.Hunger += 5;
             this.Thirst += 4;
-            this.Sleep += 5;
+            this.Boredom += 5;
         }
 
         public void Feed()
@@ -59,7 +59,7 @@ namespace VPShelter
             Console.WriteLine("{0}s age now is: {1}", this.Name, this.Age);
             Console.WriteLine("{0}s Hunger level now is: {1}", this.Name, this.Hunger);
             Console.WriteLine("{0}s Thirst level now is: {1}", this.Name, this.Thirst);
-            Console.WriteLine("{0}s Sleep level now is: {1}", this.Name, this.Sleep);
+            Console.WriteLine("{0}s Boredom level now is: {1}", this.Name, this.Boredom);
         }
 
         public void GiveWater()
@@ -71,22 +71,22 @@ namespace VPShelter
             Console.WriteLine("{0}s age now is: {1}", this.Name, this.Age);
             Console.WriteLine("{0}s Hunger level now is: {1}", this.Name, this.Hunger);
             Console.WriteLine("{0}s Thirst level now: {1}", this.Name, this.Thirst);
-            Console.WriteLine("{0}s Sleep level now is: {1}", this.Name, this.Sleep);
+            Console.WriteLine("{0}s Boredom level now is: {1}", this.Name, this.Boredom);
         }
 
-        public void Rest()
+        public void Play()
         {
             this.Tick();
-            this.Sleep -= 40;
+            this.Boredom -= 40;
             this.Hunger += 10;
             this.Thirst += 10;
-            Console.WriteLine("{0} is well rested", this.Name);
+            Console.WriteLine("{0} is No longer bored", this.Name);
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("{0}s age now is: {1}", this.Name, this.Age);
             Console.WriteLine("{0}s Hunger level now is: {1}", this.Name, this.Hunger);
             Console.WriteLine("{0}s Thirst level now: {1}", this.Name, this.Thirst);
-            Console.WriteLine("{0}s Sleep level now is: {1}", this.Name, this.Sleep);
+            Console.WriteLine("{0}s Boredom level now is: {1}", this.Name, this.Boredom);
         }
 
         public void DoNothing()
@@ -97,7 +97,7 @@ namespace VPShelter
             Console.WriteLine("{0}s age now is: {1}", this.Name, this.Age);
             Console.WriteLine("{0}s Hunger level now is: {1}", this.Name, this.Hunger);
             Console.WriteLine("{0}s Thirst level now: {1}", this.Name, this.Thirst);
-            Console.WriteLine("{0}s Sleep level now is: {1}", this.Name, this.Sleep);
+            Console.WriteLine("{0}s Boredom level now is: {1}", this.Name, this.Boredom);
         }
 
     }
